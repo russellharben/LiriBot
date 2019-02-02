@@ -2,7 +2,7 @@
   "name": "liribot",
   "version": "1.0.0",
   "description": "LIRIBot Application is used interact with the Bands in Town, Spotify and OMDB APIs",
-  "main": "appStart.js",
+  "main": "liri.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,8 +21,11 @@
   "homepage": "https://github.com/russellharben/liri-node-app#readme",
   "dependencies": {
     "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
     "inquirer": "^6.2.2",
     "lodash": "^4.17.11",
+    "moment": "^2.24.0",
     "node-spotify-api": "^1.0.7"
-  }
+  },
+  "devDependencies": {}
 }
