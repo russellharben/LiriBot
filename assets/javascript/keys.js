@@ -8,3 +8,4 @@ exports.spotify = {
 exports.bands = {
   id: process.env.bandsId
 }
+
