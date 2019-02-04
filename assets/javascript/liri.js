@@ -17,7 +17,7 @@ var command = process.argv[2];
 var value = process.argv.slice(3).join(' ');
 
 
-function spotted(){
+function spotted() {
     var spotify = new Spotify({
         id: keys.spotify.id,
         secret: keys.spotify.secret
@@ -43,7 +43,6 @@ function spotted(){
         }
     });
 }
-
 // BANDS IN TOWN Search Artist Venues
 if (command === "concert-this") {
 
@@ -75,7 +74,7 @@ if (command === "concert-this") {
 
     // SPOTIFY Search Songs
 } else if (command === "spotify-this-song") {
-    
+
     spotted();
 
 }
@@ -134,7 +133,7 @@ else if (command === "do-what-it-says") {
     if (file.includes('spotify-this-song')) {
         var start_pos = file.indexOf('"') + 1;
         var end_pos = file.indexOf('"', start_pos);
-        var getText = file.substring(start_pos,end_pos);
+        var getText = file.substring(start_pos, end_pos);
 
         command = 'spotify-this-song';
         value = getText;
