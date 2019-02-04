@@ -9,7 +9,9 @@ const fs = require('fs');
 var Spotify = require('node-spotify-api');
 // assign process.argv to a variable
 const axios = require('axios');
-
+// require Moment
+const moment = require('moment');
+moment().format();
 
 var command = process.argv[2];
 var value = process.argv.slice(3).join(' ');
@@ -34,7 +36,7 @@ function spotted(){
             console.log("ARTIST = " + artist);
             console.log("PREVIEW URL = " + previewURL);
             console.log("SONG NAME = " + value);
-            console.log("ALBUMMMM = " + album);
+            console.log("ALBUM = " + album);
 
         } else {
             console.log("Error = " + err);
@@ -62,7 +64,7 @@ if (command === "concert-this") {
                 for (i = 0; i < 10; i++) {
                     console.log("Venue Name : " + dataObj[i].venue.name);
                     console.log("Venue location : " + dataObj[i].venue.city + ", " + dataObj[i].venue.region);
-                    console.log("Date of event : " + dataObj[i].datetime);
+                    console.log("Date of event : " + (moment(dataObj[i].datetime).format('LLLL')));
                 }
 
             }).catch(function (err) {
