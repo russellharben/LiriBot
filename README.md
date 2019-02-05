@@ -1,6 +1,8 @@
 # LiriBot
 
-#LIRI Bot is a basic interactive program that accepts commands from the user in order to search the inter-webz for the desired (hopefully) results.
+LIRI Bot is a basic interactive program that accepts commands from the user in order to search the inter-webz for the desired (hopefully) results.
+
+# How does LIRI work
 
 Once open, LIRI runs off of the command line and expects one of the following commands:
 
