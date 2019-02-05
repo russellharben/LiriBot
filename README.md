@@ -18,3 +18,6 @@ If you forget to enter a search criteria, LIRI might still prompt the user for s
 
 These commands are taken and using OMDB/Spotify/BandsInTown API's, goes out and searches the appropriate database and returns a few pieces of information about the thing you're searching for.
      
+# Author(s)
+
+Russell H.
