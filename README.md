@@ -20,4 +20,4 @@ These commands are taken and using OMDB/Spotify/BandsInTown API's, goes out and 
      
 # Author(s)
 
-Russell H.
+Russell Harben
