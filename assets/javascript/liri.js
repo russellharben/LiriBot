@@ -75,7 +75,33 @@ if (command === "concert-this") {
     // SPOTIFY Search Songs
 } else if (command === "spotify-this-song") {
 
-    spotted();
+    if (!value) {
+        var spotify = new Spotify({
+            id: keys.spotify.id,
+            secret: keys.spotify.secret
+        });
+
+        spotify
+            .search({ type: 'track', query: 'The Sign', limit: "2" })
+            .then(function (response) {
+                console.log(response);
+                let artist = JSON.stringify(response.tracks.items[0].album.artists[0].name);
+                let album = JSON.stringify(response.tracks.items[0].album.name);
+                let previewURL = JSON.stringify(response.tracks.items[0].album.external_urls.spotify);
+                console.log("ARTIST = " + artist);
+                console.log("PREVIEW URL = " + previewURL);
+                console.log("SONG NAME = " + value);
+                console.log("ALBUM = " + album);
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    } else {
+        spotted();
+    }
+
+
+
 
 }
 // OMDB Search Movie Titles
